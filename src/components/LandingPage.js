@@ -7,7 +7,7 @@ class LandingPage extends React.Component {
   }
 
   render() {
-    return <p>This page will have some stuff on it soon ...</p>;
+    return <p>THIS IS THE LANDING PAGE</p>;
   }
 }
 

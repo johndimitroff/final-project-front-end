@@ -9,6 +9,9 @@ import UserProfile from "./components/UserProfile";
 import Navigation from "./components/Navigation";
 import api from "./api.js";
 import StartProject from "./components/StartProject";
+import ProjectFundingPage from "./components/ProjectFundingPage";
+import AllProjects from "./components/AllProjects";
+import HomePage from "./components/HomePage";
 
 class App extends Component {
   constructor(props) {
@@ -53,22 +56,28 @@ class App extends Component {
     return (
       <main>
         <header>
-          <h1>FINAL PROJECT</h1>
+          <h1>Project Title</h1>
 
-          {currentUser && (
-            <span>
-              <Navigation currentUser={currentUser} />
-              {/* <button onClick={() => this.logoutClick()}>Log Out</button> */}
-            </span>
-          )}
+          <span>
+            <Navigation
+              currentUser={currentUser}
+              onClick={() => this.logoutClick()}
+            />
+            {/* <button onClick={() => this.logoutClick()}>Log Out</button> */}
+          </span>
         </header>
 
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => <LandingPage currentUser={currentUser} />}
-          />
+          {!currentUser && (
+            <Route exact path="/" render={() => <LandingPage />} />
+          )}
+          {currentUser && (
+            <Route
+              exact
+              path="/"
+              render={() => <HomePage currentUser={currentUser} />}
+            />
+          )}
           <Route
             path="/login"
             render={() => (
@@ -90,12 +99,13 @@ class App extends Component {
           <Route
             exact
             path="/profile/:userId"
-            render={() => <UserProfile currentUser={currentUser} />}
+            render={match => (
+              <UserProfile currentUser={currentUser} match={match} />
+            )}
           />
-          <Route
-            path="/startproject"
-            render={() => <StartProject currentUser={currentUser} />}
-          />
+          <Route path="/startproject" component={StartProject} />
+          <Route exact path="/projects" component={AllProjects} />
+          <Route path="/projects/:projectId" component={ProjectFundingPage} />
           <Route component={NotFound} />
         </Switch>
 

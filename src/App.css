@@ -19,6 +19,7 @@ nav .active {
 
 nav a {
   margin-right: 20px;
+  text-decoration: none;
   /* display: inline-block; */
 }
 
@@ -34,4 +35,41 @@ form button {
 form {
   margin-top: 20px;
   /* padding-top: 20px; */
+}
+
+.video-container {
+  position: relative;
+  width: 500px;
+  height: 250px;
+}
+
+.other-video-container {
+  position: relative;
+  width: 500px;
+  height: 250px;
+}
+
+.in-funding-video {
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+}
+
+.in-production-video {
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+  /* height: 250px; */
+}
+
+.user-video {
+  z-index: 12;
+  width: 323px;
+  /* height: 140px; */
+  margin-left: 107px;
+}
+
+.flickering {
+  z-index: 13;
+  width: 500px;
 }
