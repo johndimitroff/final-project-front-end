@@ -7,7 +7,12 @@ class LandingPage extends React.Component {
   }
 
   render() {
-    return <p>THIS IS THE LANDING PAGE</p>;
+    return (
+      <section>
+        <p>THIS IS THE LANDING PAGE</p>;
+        <img className="landing-background" src="../FOWLER-SUNSET.jpg" />
+      </section>
+    );
   }
 }
 

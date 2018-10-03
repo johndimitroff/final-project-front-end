@@ -15,6 +15,7 @@ class StartProject extends React.Component {
       format: "",
       genre: "",
       endDate: "",
+      expectedReleaseDate: "",
       fundingTarget: "",
       isSubmitSuccess: false,
       newProject: {}
@@ -110,6 +111,11 @@ class StartProject extends React.Component {
     this.setState({ endDate: value });
   }
 
+  updateExpectedReleaseDate(event) {
+    const { value } = event.target;
+    this.setState({ expectedReleaseDate: value });
+  }
+
   updateFundingTarget(event) {
     const { value } = event.target;
     this.setState({ fundingTarget: value });
@@ -142,6 +148,7 @@ class StartProject extends React.Component {
       format,
       genre,
       endDate,
+      expectedReleaseDate,
       fundingTarget,
       isSubmitSuccess,
       newProject
@@ -223,6 +230,14 @@ class StartProject extends React.Component {
               type="date"
               value={endDate}
               onChange={event => this.updateEndDate(event)}
+            />
+          </label>
+          <label>
+            Expected release date:
+            <input
+              type="date"
+              value={expectedReleaseDate}
+              onChange={event => this.updateExpectedReleaseDate(event)}
             />
           </label>
           <label>

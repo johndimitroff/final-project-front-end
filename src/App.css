@@ -62,6 +62,13 @@ form {
   /* height: 250px; */
 }
 
+.countdown-video {
+  z-index: 12;
+  width: 323px;
+  /* height: 140px; */
+  margin-left: 107px;
+}
+
 .user-video {
   z-index: 12;
   width: 323px;
@@ -72,4 +79,10 @@ form {
 .flickering {
   z-index: 13;
   width: 500px;
+}
+
+.landing-background {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }

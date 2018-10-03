@@ -1,6 +1,7 @@
 import React from "react";
 import api from "../api";
 import empty from "../empty-movie-theater.mp4";
+import countdownVideo from "../countdown.mp4";
 
 import full from "../full-movie-theater-1.mp4";
 
@@ -17,6 +18,7 @@ class ProjectFundingPage extends React.Component {
       format: "",
       genre: "",
       endDate: "",
+      expectedReleaseDate: "",
       fundingTarget: "",
       moneyReceived: "",
       isPicked: false
@@ -60,10 +62,25 @@ class ProjectFundingPage extends React.Component {
       format,
       genre,
       endDate,
+      expectedReleaseDate,
       fundingTarget,
       moneyReceived,
       isPicked
     } = this.state;
+
+    const { params } = this.props.match;
+    const countDownDate = new Date(expectedReleaseDate).getTime();
+    const newCount = countDownDate / 1000;
+    const now = new Date().getTime();
+    const newNow = now / 1000;
+    const timeLeft = Math.floor(newCount - newNow);
+    console.log("timeleft", timeLeft);
+    console.log("new count", newCount);
+    console.log("countdown date", countDownDate);
+    console.log("params.expectedReleaseDate", params.expectedReleaseDate);
+    console.log("params", params);
+    console.log("expectedReleaseDate", expectedReleaseDate);
+
     return (
       <section>
         {moneyReceived < fundingTarget && (
@@ -72,12 +89,24 @@ class ProjectFundingPage extends React.Component {
               This production is currently <strong>in funding</strong>
             </p>
             <video className="in-funding-video" src={empty} loop autoPlay />
+            <video
+              className="user-video"
+              src={videoFile}
+              // width="500px"
+              // height="250px"
+              loop
+              autoPlay
+            />
+            <img
+              className="flickering"
+              src="https://raw.githubusercontent.com/johndimitroff/final-project-front-end/master/src/static.gif"
+            />
           </div>
         )}
         {moneyReceived >= fundingTarget && (
           <div>
             <p>
-              This production is currently <strong>in production</strong>
+              This production is currently <strong>IN PRODUCTION</strong>
             </p>
             <div className="video-container">
               <video
@@ -89,20 +118,27 @@ class ProjectFundingPage extends React.Component {
                 autoPlay
               />
               <video
+                className="countdown-video"
+                src={countdownVideo}
+                // width="500px"
+                // height="250px"
+                loop
+                autoPlay
+              />
+              {/* <video
                 className="user-video"
                 src={videoFile}
                 // width="300px"
                 // // height="140px"
                 loop
                 autoPlay
-              />
-              <image
+              /> */}
+              <img
                 className="flickering"
-                src="../flickering2.gif"
-                loop
-                autoPlay
+                src="https://raw.githubusercontent.com/johndimitroff/final-project-front-end/master/src/static.gif"
               />
             </div>
+            <h2>Expected time until release: {timeLeft} </h2>
           </div>
         )}
         <h2>{projectName}</h2>
