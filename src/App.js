@@ -12,6 +12,7 @@ import StartProject from "./components/StartProject";
 import ProjectFundingPage from "./components/ProjectFundingPage";
 import AllProjects from "./components/AllProjects";
 import HomePage from "./components/HomePage";
+import ProjectWatchPage from "./components/ProjectWatchPage";
 
 class App extends Component {
   constructor(props) {
@@ -97,7 +98,6 @@ class App extends Component {
             )}
           />
           <Route
-            exact
             path="/profile/:userId"
             render={match => (
               <UserProfile currentUser={currentUser} match={match} />
@@ -105,6 +105,10 @@ class App extends Component {
           />
           <Route path="/startproject" component={StartProject} />
           <Route exact path="/projects" component={AllProjects} />
+          <Route
+            path="/projects/:projectId/watch"
+            component={ProjectWatchPage}
+          />
           <Route path="/projects/:projectId" component={ProjectFundingPage} />
           <Route component={NotFound} />
         </Switch>

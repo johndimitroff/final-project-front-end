@@ -9,8 +9,10 @@ class LandingPage extends React.Component {
   render() {
     return (
       <section>
-        <p>THIS IS THE LANDING PAGE</p>;
-        <img className="landing-background" src="../FOWLER-SUNSET.jpg" />
+        <img
+          className="landing-background"
+          src="https://raw.githubusercontent.com/johndimitroff/final-project-front-end/master/src/FOWLER-SUNSET.jpg"
+        />
       </section>
     );
   }

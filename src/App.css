@@ -1,3 +1,12 @@
+/* * {
+  font-family: Roboto-condensed bold italic;
+} */
+
+* {
+  font-style: italic;
+  text-transform: uppercase;
+}
+
 label,
 form button {
   display: block;
@@ -49,9 +58,11 @@ form {
   height: 250px;
 }
 
+.video-wrapper {
+  position: relative;
+}
+
 .in-funding-video {
-  position: absolute;
-  z-index: -1;
   width: 500px;
 }
 
@@ -70,19 +81,33 @@ form {
 }
 
 .user-video {
-  z-index: 12;
-  width: 323px;
-  /* height: 140px; */
-  margin-left: 107px;
+  position: absolute;
+  width: 330px;
+  top: 0;
+  left: 100px;
 }
 
 .flickering {
-  z-index: 13;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 500px;
 }
 
 .landing-background {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0 auto;
 }
+
+.countdown-numbers {
+  z-index: 14;
+  font-size: 35px;
+  margin-left: 180px;
+  margin-top: 0px;
+}
+
+/* label,
+form button {
+  display: block;
+} */
