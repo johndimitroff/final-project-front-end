@@ -125,7 +125,26 @@ class UserProfile extends React.Component {
           />
           <Route
             path="/profile/:userId/public-view"
-            render={() => <h2>PUBLIC VIEW</h2>}
+            render={() => (
+              <div>
+                <h2>
+                  {currentUser.firstName}
+                  's PROFILE
+                </h2>
+
+                <ul>
+                  <li>
+                    <p>Posts:</p>
+                  </li>
+                  <li>
+                    <p>Favorite Films:</p>
+                  </li>
+                  <li>
+                    <p>Favorite Filmmakers:</p>
+                  </li>
+                </ul>
+              </div>
+            )}
           />
         </Switch>
       </section>

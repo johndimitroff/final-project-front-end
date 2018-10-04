@@ -39,6 +39,7 @@ class ProjectWatchPage extends React.Component {
           // height="250px"
           loop
           autoPlay
+          controls
         />
       </div>
     );

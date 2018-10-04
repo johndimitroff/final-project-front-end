@@ -107,6 +107,11 @@ form {
   margin-top: 0px;
 }
 
+.finished-user-video {
+  width: 80%;
+  margin-left: 100px;
+}
+
 /* label,
 form button {
   display: block;
