@@ -1,6 +1,9 @@
 import React from "react";
 import api from "../api";
 import empty from "../cinema5.mp4";
+import empty1 from "../1person.mp4";
+import empty2 from "../3people.mp4";
+import empty3 from "../bunchofpeople.mp4";
 import countdownVideo from "../countdown.mp4";
 import { NavLink } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
@@ -139,6 +142,10 @@ class ProjectFundingPage extends React.Component {
             </p>
             <div className="video-wrapper">
               <video className="in-funding-video" src={empty} loop autoPlay />
+              {/* <video className="in-funding-video" src={empty1} loop autoPlay />
+              <video className="in-funding-video" src={empty2} loop autoPlay />
+              <video className="in-funding-video" src={empty3} loop autoPlay /> */}
+
               <video
                 className="user-video"
                 src={videoFile}
@@ -147,6 +154,7 @@ class ProjectFundingPage extends React.Component {
                 loop
                 autoPlay
               />
+
               <img
                 className="flickering"
                 src="https://raw.githubusercontent.com/johndimitroff/final-project-front-end/master/src/static.gif"
