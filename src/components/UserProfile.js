@@ -50,7 +50,7 @@ class UserProfile extends React.Component {
     // const { projectsContributedArray } = currentUser.projectsContributed;
     // const { projectArray } = this.state;
     return (
-      <section>
+      <section className="profile-background">
         <span>
           <header>{currentUser && <p>Hi, {currentUser.firstName}</p>}</header>
           <NavLink to={`/profile/${params.userId}/my-view`}>My Slate</NavLink>

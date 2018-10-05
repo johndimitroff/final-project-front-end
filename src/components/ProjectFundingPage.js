@@ -1,6 +1,6 @@
 import React from "react";
 import api from "../api";
-import empty from "../empty-movie-theater.mp4";
+import empty from "../cinema5.mp4";
 import countdownVideo from "../countdown.mp4";
 import { NavLink } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
@@ -41,6 +41,7 @@ class ProjectFundingPage extends React.Component {
     api
       .get(`projects/${params.projectId}`)
       .then(response => {
+        console.log("SERVER RESPONSE");
         console.log("Project data", response.data);
         this.setState(response.data);
       })
@@ -99,6 +100,8 @@ class ProjectFundingPage extends React.Component {
       isPicked
     } = this.state;
 
+    // console.log("VIDEOFILE", videoFile);
+
     const { params } = this.props.match;
     const countDownDate = new Date(expectedReleaseDate).getTime();
     const newCount = countDownDate / 1000;
@@ -111,6 +114,12 @@ class ProjectFundingPage extends React.Component {
 
     // const { moneyReceived } = this.state.moneyReceived;
     // const { budget } = this.budget;
+
+    if (moneyReceived < budget) {
+      inFunding = true;
+      isComplete = false;
+      inProduction = false;
+    }
     if (moneyReceived >= budget) {
       inProduction = true;
       inFunding = false;
@@ -122,7 +131,7 @@ class ProjectFundingPage extends React.Component {
     }
 
     return (
-      <section>
+      <section className="funding-background">
         {inFunding && (
           <div className="other-video-container">
             <p>

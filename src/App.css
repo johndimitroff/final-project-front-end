@@ -82,9 +82,9 @@ form {
 
 .user-video {
   position: absolute;
-  width: 330px;
-  top: 0;
-  left: 100px;
+  width: 136px;
+  top: 134px;
+  left: 184px;
 }
 
 .flickering {
@@ -95,6 +95,34 @@ form {
 }
 
 .landing-background {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.profile-background {
+  background-image: url("https://raw.githubusercontent.com/johndimitroff/final-project-front-end/master/src/clouds1.png");
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.All-projects-background {
+  background-image: url("https://raw.githubusercontent.com/johndimitroff/final-project-front-end/master/src/clouds2.png");
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.funding-background {
+  background-image: url("https://github.com/johndimitroff/final-project-front-end/blob/master/src/clouds3.png");
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.start-background {
+  background-image: url("https://github.com/johndimitroff/final-project-front-end/blob/master/src/clouds3.png");
   width: 100%;
   height: 100%;
   margin: 0 auto;

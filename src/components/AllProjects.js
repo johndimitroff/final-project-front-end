@@ -29,7 +29,7 @@ class AllProjects extends React.Component {
   render() {
     const { projectArray } = this.state;
     return (
-      <section>
+      <section className="All-projects-background">
         {/* <h2>All projects</h2>
         <NavLink to={`/projects/${params.projectId}/inFunding`}>
           <strong> NOW SHOWING </strong>

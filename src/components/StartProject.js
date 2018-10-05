@@ -284,7 +284,7 @@ class StartProject extends React.Component {
     }
 
     return (
-      <section>
+      <section className="start-background">
         {/* STEP 1 STEP 1STEP 1 STEP 1 STEP 1 STEP 1 BASIC INFO */}
         {step1 && (
           <div>
