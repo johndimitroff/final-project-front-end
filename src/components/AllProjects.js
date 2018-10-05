@@ -1,6 +1,8 @@
 import React from "react";
 import api from "../api";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 class AllProjects extends React.Component {
   constructor(props) {
@@ -28,7 +30,16 @@ class AllProjects extends React.Component {
     const { projectArray } = this.state;
     return (
       <section>
-        <h2>All projects</h2>
+        {/* <h2>All projects</h2>
+        <NavLink to={`/projects/${params.projectId}/inFunding`}>
+          <strong> NOW SHOWING </strong>
+        </NavLink>
+        <NavLink to={`/projects/${params.projectId}/inProduction`}>
+          <strong> NOW SHOWING </strong>
+        </NavLink>
+        <NavLink to={`/projects/${params.projectId}/watch`}>
+          <strong> NOW SHOWING </strong>
+        </NavLink> */}
 
         <ul>
           {projectArray.map(oneProject => (

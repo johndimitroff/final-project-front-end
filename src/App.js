@@ -57,7 +57,7 @@ class App extends Component {
     return (
       <main>
         <header>
-          <h1>Project Title</h1>
+          <h1>AUTARKIC MOVIE PALACE</h1>
 
           <span>
             <Navigation

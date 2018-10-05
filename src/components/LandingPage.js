@@ -11,7 +11,7 @@ class LandingPage extends React.Component {
       <section>
         <img
           className="landing-background"
-          src="https://raw.githubusercontent.com/johndimitroff/final-project-front-end/master/src/FOWLER-SUNSET.jpg"
+          src="https://raw.githubusercontent.com/johndimitroff/final-project-front-end/master/src/landing-background.jpg"
         />
       </section>
     );

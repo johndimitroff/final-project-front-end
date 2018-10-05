@@ -17,7 +17,7 @@ function Navigation(props) {
       )}
       {currentUser && (
         <span>
-          <NavLink to="/projects">ProjectTitle Slate</NavLink>
+          <NavLink to="/projects">A.M.P. Slate</NavLink>
           <NavLink to={`/profile/${currentUser._id}`}>
             <NavLink to="/startproject">Start a Project </NavLink>
             {currentUser.firstName}
